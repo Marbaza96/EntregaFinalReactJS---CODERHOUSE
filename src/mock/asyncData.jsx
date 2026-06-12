@@ -5,7 +5,7 @@ const productos = [
         description: 'El lector FreeStyle Libre 2 permite ver los datos recopilados por el sensor Freestyle Libre 2 Plus, ofreciendo información completa, con alarmas personalizables. Monitoreo Continuo de Glucosa.',
         price: 3300,
         stock: 5,
-        category: 'lector',
+        category: 'lectores',
         img: 'https://i.postimg.cc/JhgrVkYn/4.png'
     },
 
@@ -15,7 +15,7 @@ const productos = [
         description: 'Glucómetro que permite mediciones rápidas y efectivas en solo 5 segundos. Es ideal para pacientes que requieren control regular de su nivel de glucosa en sangre.',
         price: 2990,
         stock: 7,
-        category: 'lector',
+        category: 'lectores',
         img: 'https://i.postimg.cc/jj9x073h/7.png'
     },
 
@@ -24,7 +24,7 @@ const productos = [
         name: 'Sensor GS1 Sibionics (CGM)',
         description: 'Sensor Sibionics con tecnología avanzada para monitoreo continuo de glucosa en sangre. Ideal para pacientes diabéticos que necesitan un control constante de su nivel de azúcar.',
         stock: 10,
-        category: 'sensor',
+        category: 'sensores',
         img: 'https://i.postimg.cc/5tG4dCKt/1.png'
     },
 
@@ -34,7 +34,7 @@ const productos = [
         description: 'El sensor FreeStyle Libre 2 Plus es compatible con el lector FreeStyle Libre 2 (color azul). Puede comprobar su nivel de glucosa en cualquier momento y en cualquier lugar.',
         price: 2736,
         stock: 20,
-        category: 'sensor',
+        category: 'sensores',
         img: 'https://i.postimg.cc/PqNXR4yZ/3.png'
     },
 
@@ -44,7 +44,7 @@ const productos = [
         description: 'Tiras Accu-Chek x25 unidades. Indicado para el autocontrol de la glucosa en sangre, es esencial para pacientes diabéticos que requieren mediciones periódicas.',
         price: 1300,
         stock: 40,
-        category: 'accesorios',
+        category: 'tiras reactivas',
         img: 'https://i.postimg.cc/43Mfk92L/9.png'
     },
 
@@ -54,7 +54,7 @@ const productos = [
         description: 'Tiras Optium Freestyle x25 unidades. Diseñados para la determinación de glucosa en sangre capilar, permiten realizar pruebas de glucemia de manera rápida y precisa.',
         price: 1100,
         stock: 30,
-        category: 'accesorios',
+        category: 'tiras reactivas',
         img: 'https://i.postimg.cc/g05zFZtq/6.png'
     },
 
