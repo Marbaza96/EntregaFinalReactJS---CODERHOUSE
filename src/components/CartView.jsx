@@ -24,11 +24,11 @@ const CartView = () => {
                     </div>
                 ))}
             </div>
-            <span>Total a pagar: ${total}UYU</span>
+            <span>Total a pagar: ${total()}UYU</span>
             <div>
                 <button className='btn btn-danger' onClick={clear}>Vaciar carrito</button>
-                <button className='btn btn-success'>Finalizar compra</button>
                 <Link to="/" className="btn btn-primary">Seguir comprando</Link>
+                <Link className='btn btn-success' to='/checkout'>Finalizar compra</Link>
             </div>
         </div>
 

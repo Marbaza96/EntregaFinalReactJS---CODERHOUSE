@@ -4,34 +4,49 @@ import Item from "./item";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import LoaderComponent from "./LoaderComponent";
+import { collection } from "firebase/firestore";
+import { db } from "../service/firebase"
+import { getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = ({ saludo }) => {
     const [data, setData] = useState([]);
     const [loader, setLoader] = useState(false);
-    const {type} = useParams();
+    const { type } = useParams();
 
+    //FIREBASE
     useEffect(() => {
         setLoader(true);
-        getProducts()
-            .then((res) => { 
-                if(type) {
-                    setData(res.filter((prod) => prod.category === type));
-                } else {
-                    setData(res);
-                }
-             })
-            .catch((error) =>console.log(error)) 
+
+        //CONEXIÓN A LA COLLECTION Y FILTRAR CONECTANDO CON QUERY
+        const prodCollection = type
+            ? query(collection(db, "items"), where("category", "==", type))
+            : collection(db, "items");
+
+
+        getDocs(prodCollection)
+            .then((res) => {
+                const list = res.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data(),
+                    };
+                });
+
+                setData(list);
+            })
+            .catch((error) => console.log(error))
             .finally(() => setLoader(false));
-    }, [type]);
+
+    }, [type])
 
     return (
         <>
-        {loader 
-        ? <LoaderComponent text={type ? 'Cargando categoría...' : 'Cargando productos...'} />
-        :<div>
-            <h1>{saludo}{type && <span> - {type}</span>}</h1>
-            <ItemList data={data} />
-        </div>}
+            {loader
+                ? <LoaderComponent text={type ? 'Cargando categoría...' : 'Cargando productos...'} />
+                : <div>
+                    <h1>{saludo}{type && <span> - {type}</span>}</h1>
+                    <ItemList data={data} />
+                </div>}
         </>
     )
 }
