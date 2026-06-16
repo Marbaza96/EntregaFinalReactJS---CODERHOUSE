@@ -17,10 +17,10 @@ Este proyecto fue realizado para la entrega de React JS en Coderhouse. Simula un
 Para ver el proyecto online, ingrese al siguiente link: [Glucon](LINK)
 
 ### Librerías utilizadas 📖
-- [React Bootstrap](LINK)
-- [React Icons](LINK)
-- [React Router Dom](LINK)
-- [Firebase](LINK)
+- [React Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [React Router Dom](https://reactrouter.com/home)
+- [Firebase](https://firebase.google.com/?hl=es-419)
 - [SweetAlert2](https://sweetalert2.github.io/#examples)
 - [React-Hook Form](https://react-hook-form.com/get-started#Registerfields)
 

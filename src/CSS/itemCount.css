@@ -1,0 +1,48 @@
+.item-count {
+    margin: 1rem 0;
+}
+
+.item-count-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.item-count-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.item-count-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--light-blue);
+    color: var(--dark);
+    font-weight: 800;
+}
+
+.item-count-number {
+    color: var(--white);
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
+}
+
+.item-count-buy {
+    flex: 1;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--light-blue);
+    color: var(--dark);
+    font-weight: 700;
+    padding: 0.55rem;
+    transition: 0.3s;
+}
+
+.item-count-buy:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}

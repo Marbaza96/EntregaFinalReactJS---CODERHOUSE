@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProducts, productos } from "../mock/asyncData";
-import Item from "./item";
+import Item from "./Item";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import LoaderComponent from "./LoaderComponent";
@@ -44,7 +44,16 @@ const ItemListContainer = ({ saludo }) => {
             {loader
                 ? <LoaderComponent text={type ? 'Cargando categoría...' : 'Cargando productos...'} />
                 : <div>
-                    <h1>{saludo}{type && <span> - {type}</span>}</h1>
+                    <div className="catalog-header">
+                        <h1 className="catalog-title">
+                            {saludo}
+                            {type && <span> - {type}</span>}
+                        </h1>
+
+                        <p className="catalog-subtitle">
+                            Catálogo completo
+                        </p>
+                    </div>
                     <ItemList data={data} />
                 </div>}
         </>

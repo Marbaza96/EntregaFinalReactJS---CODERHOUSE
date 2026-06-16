@@ -14,11 +14,11 @@ const CheckoutRHF = () => {
     const { register, handleSubmit, formState: { errors }, getValues } = useForm()
 
     const terminarCompra = (data) => {
-    const {name, lastname, address, email}=data
+        const { name, lastname, address, email } = data
 
         setLoading(true)
         let orden = {
-            comprador: {name, lastname, address, email},
+            comprador: { name, lastname, address, email },
             carrito: cart,
             total: total(),
             fecha: serverTimestamp()
@@ -42,35 +42,99 @@ const CheckoutRHF = () => {
         <>
             {
                 orderId
-                    ? <div>
-                        <h1>Muchas gracias por tu compra!</h1>
-                        <h2> Tu orden es la N°: {orderId} </h2>
-                        <Link className="btn btn-dark" to="/">Volver a la home</Link>
+                    ? (
+                        <main className="checkout-container">
+                            <section className="checkout-success">
+                                <h1>¡Muchas gracias por tu compra!</h1>
+                                <h2>Tu orden es la N°: {orderId}</h2>
 
+                                <Link className="checkout-home-btn" to="/">
+                                    Volver a la home
+                                </Link>
+                            </section>
+                        </main>
+                    )
+                    : (
+                        <main className="checkout-container">
+                            <section className="checkout-card">
+                                <h1 className="checkout-title">
+                                    Complete sus datos para finalizar la compra
+                                </h1>
+                                <p className="checkout-subtitle">
+                                    Complete el formulario para generar tu orden de compra.
+                                </p>
 
-                    </div>
-                    : <div>
-                        <h1>Complete sus datos para finalizar la compra</h1>
+                                <div className="checkout-total">
+                                    Total de la compra: ${total()} UYU
+                                </div>
 
-                        <form className="p-4 border rounded shadow-sm bg-light" onSubmit={handleSubmit(terminarCompra)}>
-                            <input className="form-control" name="name" type="text" placeholder="Ingrese su nombre" {...register("name", { required: true, minLength: 3 })} />
-                            {errors?.name?.type === "required" && <small style={{ color: "red" }}>Complete campo obligatorio</small>}
-                            {errors?.name?.type === "minLength" && <small style={{ color: "red" }}>El nombre debe contener mínimo 3 caracteres</small>}
-                            <input className="form-control" name="lastname" type="text" placeholder="Ingrese su apellido" {...register("lastname", { required: true, minLength: 3 })} />
-                            {errors?.lastname?.type === "required" && <small style={{ color: "red" }}>Complete campo obligatorio</small>}
-                            {errors?.lastname?.type === "minLength" && <small style={{ color: "red" }}>El apellido debe contener mínimo 3 caracteres</small>}
-                            <input className="form-control" name="address" type="text" placeholder="Ingrese su dirección" {...register("address", { required: true, maxLength: 40 })} />
-                            {errors?.address?.type === "required" && <small style={{ color: "red" }}>Complete campo obligatorio</small>}
-                            {errors?.address?.type === "maxLength" && <small style={{ color: "red" }}>La dirección debe contener máximo 30 caracteres</small>}
-                            <input className="form-control" name="mail" type="email" placeholder="Ingrese su correo electrónico" {...register("email", { required: true })} />
-                            {errors?.email?.type === "required" && <small style={{ color: "red" }}>Complete campo obligatorio</small>}
-                            <input className="form-control" name="secondmail" type="email" placeholder="Repite tu correo electrónico"
-                                {...register("secondemail", { required: true, validate: { equalsMails: mail2 => mail2 === getValues().email } })} />
-                            {errors?.secondemail?.type === "required" && <small style={{ color: "red" }}>Complete campo obligatorio</small>}
-                            {errors?.secondemail?.type === "equalsMails" && <small style={{ color: "red" }}>Los correos no coinciden</small>}
-                            <button type="submit" className="btn btn-success" disabled={loading} >{loading ? 'Cargando compra...' : "Finalizar la compra"} </button>
-                        </form>
-                    </div>
+                                <form className="checkout-form" onSubmit={handleSubmit(terminarCompra)}>
+
+                                    <input
+                                        className="checkout-input"
+                                        name="name"
+                                        type="text"
+                                        placeholder="Ingrese su nombre"
+                                        {...register("name", { required: true, minLength: 3 })}
+                                    />
+                                    {errors?.name?.type === "required" && <small className="checkout-error">Complete campo obligatorio</small>}
+                                    {errors?.name?.type === "minLength" && <small className="checkout-error">El nombre debe contener mínimo 3 caracteres</small>}
+
+                                    <input
+                                        className="checkout-input"
+                                        name="lastname"
+                                        type="text"
+                                        placeholder="Ingrese su apellido"
+                                        {...register("lastname", { required: true, minLength: 3 })}
+                                    />
+                                    {errors?.lastname?.type === "required" && <small className="checkout-error">Complete campo obligatorio</small>}
+                                    {errors?.lastname?.type === "minLength" && <small className="checkout-error">El apellido debe contener mínimo 3 caracteres</small>}
+
+                                    <input
+                                        className="checkout-input"
+                                        name="address"
+                                        type="text"
+                                        placeholder="Ingrese su dirección"
+                                        {...register("address", { required: true, maxLength: 40 })}
+                                    />
+                                    {errors?.address?.type === "required" && <small className="checkout-error">Complete campo obligatorio</small>}
+                                    {errors?.address?.type === "maxLength" && <small className="checkout-error">La dirección debe contener máximo 40 caracteres</small>}
+
+                                    <input
+                                        className="checkout-input"
+                                        name="mail"
+                                        type="email"
+                                        placeholder="Ingrese su correo electrónico"
+                                        {...register("email", { required: true })}
+                                    />
+                                    {errors?.email?.type === "required" && <small className="checkout-error">Complete campo obligatorio</small>}
+
+                                    <input
+                                        className="checkout-input"
+                                        name="secondmail"
+                                        type="email"
+                                        placeholder="Repite tu correo electrónico"
+                                        {...register("secondemail", {
+                                            required: true,
+                                            validate: {
+                                                equalsMails: mail2 => mail2 === getValues().email
+                                            }
+                                        })}
+                                    />
+                                    {errors?.secondemail?.type === "required" && <small className="checkout-error">Complete campo obligatorio</small>}
+                                    {errors?.secondemail?.type === "equalsMails" && <small className="checkout-error">Los correos no coinciden</small>}
+
+                                    <button
+                                        type="submit"
+                                        className="checkout-submit"
+                                        disabled={loading}
+                                    >
+                                        {loading ? 'Cargando compra...' : "Finalizar la compra"}
+                                    </button>
+                                </form>
+                            </section>
+                        </main>
+                    )
             }
         </>
     )

@@ -23,6 +23,7 @@ export const productos = [
     /*     id: '3', */
         name: 'Sensor GS1 Sibionics (CGM)',
         description: 'Sensor Sibionics con tecnología avanzada para monitoreo continuo de glucosa en sangre. Ideal para pacientes diabéticos que necesitan un control constante de su nivel de azúcar.',
+        price: 3350,
         stock: 10,
         category: 'sensores',
         img: 'https://i.postimg.cc/5tG4dCKt/1.png'
@@ -82,6 +83,7 @@ export const productos = [
     /*     id: '9', */
         name: 'Parches protectores Sensor FreeStyle Libre 2 (x10 unid)',
         description: 'Pack x 10 Protectores autoadhesivos para sensor Freestyle Libre 1 y 2. Hipoalergénico, fabricado en algodón.',
+        price: 220,
         stock: 100,
         category: 'accesorios',
         img: 'https://i.postimg.cc/0N3kRwXr/2.png'

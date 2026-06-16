@@ -18,25 +18,46 @@ const ItemCount = ({ stock, onAdd }) => {
 
   const purchase = () => {
     onAdd(count)
-
   }
 
   return (
-    <div>
-      <div>
-        <button className='btn btn-primary' onClick={restar} disabled={count === 0}>
-          -
-        </button>
-        <span className='mx-3'>{count}</span>
-        <button className='btn btn-primary' onClick={sumar} disabled={count === stock}>
-          +
-        </button>
-      </div>
-      <button className="btn btn-primary buy-btn" onClick={purchase} disabled={count === 0 || stock === 0}>
-        Comprar
-      </button>
-    </div>
+    <div className="item-count">
 
+      <div className="item-count-row">
+
+        <div className="item-count-controls">
+
+          <button
+            className="item-count-btn"
+            onClick={restar}
+            disabled={count === 0}
+          >
+            -
+          </button>
+
+          <span className="item-count-number">{count}</span>
+
+          <button
+            className="item-count-btn"
+            onClick={sumar}
+            disabled={count === stock}
+          >
+            +
+          </button>
+
+        </div>
+
+        <button
+          className="item-count-buy"
+          onClick={purchase}
+          disabled={count === 0 || stock === 0}
+        >
+          Agregar
+        </button>
+
+      </div>
+
+    </div>
   )
 }
 

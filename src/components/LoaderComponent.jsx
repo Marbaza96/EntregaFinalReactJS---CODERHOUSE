@@ -3,9 +3,16 @@ import { Spinner } from 'react-bootstrap';
 
 const LoaderComponent = ({ text }) => {
   return (
-    <div>
-      <Spinner animation="grow" variant="dark" role="status"/>
-      <span className="ms-2">{text}</span>
+    <div className="loader-container">
+      <Spinner
+        animation="grow"
+        variant="light"
+        role="status"
+        className="loader-spinner"
+      />
+      <span className="loader-text">
+        {text}
+      </span>
     </div>
   )
 }

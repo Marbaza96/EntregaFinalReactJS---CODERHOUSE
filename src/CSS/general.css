@@ -1,0 +1,83 @@
+/* VARIABLES GLOBALES */
+
+:root {
+    --dark: #172536;
+    --dark-card: #2b3a4e;
+    --light-blue: #93cce8;
+    --orange: #ff5b1f;
+    --white: #ffffff;
+    --text-dark: #172536;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+}
+
+/* TITULOS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* CONTENEDOR GENERAL */
+
+.main-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* BOTONES PERSONALIZADOS */
+
+.btn-glucon {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-glucon:hover {
+    background-color: #ff7a49;
+    color: var(--white);
+}
+
+/* TARJETAS BASE */
+
+.card-glucon {
+    background-color: var(--dark-card);
+    border: none;
+    border-radius: 16px;
+    color: var(--white);
+}
+
+/* IMAGENES */
+
+img {
+    max-width: 100%;
+    display: block;
+}

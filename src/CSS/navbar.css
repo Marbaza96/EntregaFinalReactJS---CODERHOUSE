@@ -1,0 +1,84 @@
+.navbar-glucon {
+    background-color: var(--dark) !important;
+    padding: 0.2rem 0;
+    border-bottom: 3px solid var(--orange);
+}
+
+.navbar-logo {
+    width: 160px;
+    height: auto;
+}
+
+.navbar-glucon .navbar-brand {
+    margin-right: 6rem;
+}
+
+.navbar-glucon .nav-link {
+    color: var(--white) !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0.8rem;
+}
+
+.navbar-glucon .nav-link:hover,
+.navbar-glucon .nav-link.active {
+    color: var(--orange) !important;
+}
+
+.navbar-glucon .dropdown-menu {
+    background-color: var(--dark-card);
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-glucon .dropdown-item {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.navbar-glucon .dropdown-item:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.navbar-glucon .navbar-toggler {
+    background-color: var(--light-blue);
+    border: none;
+}
+
+.cart-widget {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon {
+    font-size: 2rem;
+    color: var(--orange);
+    transition: 0.3s;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+
+    background-color: var(--light-blue) !important;
+    color: var(--dark) !important;
+
+    font-weight: 700;
+    font-size: 0.8rem;
+
+    border-radius: 50%;
+    min-width: 22px;
+    min-height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

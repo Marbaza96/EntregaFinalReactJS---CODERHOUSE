@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom'
 
 const EmptyCart = () => {
   return (
-    <div>
-      <h1>El carrito está vacío</h1>
-      <h2>Agrega productos para finalizar tu compra</h2>
-      <Link to="/">Volver a comprar</Link>
-    </div>
+    <main className="empty-cart">
+      <div className="empty-cart-box">
+        <h1>Tu carrito está vacío 🛒 </h1>
+
+        <p>
+          Todavía no agregaste productos a tu carrito.
+        </p>
+
+        <Link to="/" className="empty-cart-btn">
+          Ir al catálogo
+        </Link>
+      </div>
+    </main>
   )
 }
 

@@ -1,0 +1,68 @@
+.footer-glucon {
+    background-color: var(--dark);
+    color: var(--white);
+    margin-top: 4rem;
+    padding: 3rem 0 1rem;
+    border-top: 2px solid var(--orange);
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    align-items: start;
+    justify-items: center;
+}
+
+.footer-column {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-column:first-child {
+    text-align: left;
+}
+
+.footer-column:nth-child(2) {
+    text-align: center;
+}
+
+.footer-column:last-child {
+    text-align: right;
+}
+
+.footer-column h5 {
+    color: var(--light-blue);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.footer-column p {
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.footer-copy {
+    width: 90%;
+    max-width: 1400px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+
+    font-size: 0.9rem;
+    color: var(--light-blue);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

@@ -7,14 +7,13 @@ import { NavLink } from "react-router-dom";
 
 function NavbarBR() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
+    <Navbar expand="lg" className="navbar-glucon">
+      <Container fluid="lg">
         <Navbar.Brand as={NavLink} to="/">
           <img
             src="../logo-glucon.png"
-            alt="Logo"
-            width="100"
-            height="100"
+            alt="Logo Glucon"
+            className='navbar-logo'
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -28,7 +27,6 @@ function NavbarBR() {
               <NavDropdown.Item as={NavLink} to="/category/accesorios">Accesorios</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/category/tiras reactivas">Tiras reactivas</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">ABOUT</Nav.Link>
           </Nav>
           <NavLink to="/cart" style={{ textDecoration: 'none' }}>
             <CartWidgetRI />

@@ -7,9 +7,14 @@ const CartWidgetRI = () => {
     const { cart, totalQty } = useContext(CartContext);
 
     return (
-        <div>
-            <FaShoppingCart fontSize={"2rem"} />
-            {cart.length > 0 && <Badge bg="info">{totalQty()}</Badge>}
+        <div className="cart-widget">
+            <FaShoppingCart className="cart-icon" />
+
+            {cart.length > 0 && (
+                <Badge className="cart-badge">
+                    {totalQty()}
+                </Badge>
+            )}
         </div>
     );
 }

@@ -1,0 +1,23 @@
+.loader-container {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5rem;
+}
+
+.loader-spinner {
+    width: 4rem !important;
+    height: 4rem !important;
+}
+
+.loader-text {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

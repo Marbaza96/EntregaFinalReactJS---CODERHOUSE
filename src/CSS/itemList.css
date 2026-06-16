@@ -1,0 +1,28 @@
+.catalog-header {
+    width: 90%;
+    max-width: 1400px;
+    margin: 2.5rem auto 0;
+}
+
+.catalog-title {
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.catalog-subtitle {
+    color: var(--light-blue);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.catalog-grid {
+    width: 90%;
+    max-width: 1400px;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}

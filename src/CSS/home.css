@@ -1,0 +1,35 @@
+.hero-carousel {
+    width: 100%;
+    background-color: var(--dark);
+}
+
+.hero-carousel .carousel-item {
+    height: auto;
+}
+
+.hero-carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-carousel .carousel-indicators {
+    margin-bottom: 1rem;
+}
+
+.hero-carousel .carousel-indicators button {
+    background-color: var(--white);
+    width: 35px;
+    height: 3px;
+}
+
+.hero-carousel .carousel-control-prev-icon,
+.hero-carousel .carousel-control-next-icon {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .hero-carousel .carousel-indicators {
+        margin-bottom: 0.5rem;
+    }
+}
