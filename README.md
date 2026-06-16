@@ -1,16 +1,29 @@
-# React + Vite
+#Glucon - Tienda Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![app](/public/logo-glucon.png)
 
-Currently, two official plugins are available:
+Este proyecto fue realizado para la entrega de React JS en Coderhouse. Simula un e-commerce funcional donde se muestran productos y suministros para diabéticos disponibles en Uruguay.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Instalación ⚙️
 
-## React Compiler
+1. Clonar el repositorio
+2. Moverse a la carpeta creada con el comando `cd nombre de carpeta`
+3. Ejecutar el comando `npm install` para instalar dependencias y crar la carpeta `node_modules`.
+4. Ejecutar el comando `npm run dev` para levantar la app en un entorno local.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Es necesario contar con Node v24.14.0 instalado
 
-## Expanding the ESLint configuration
+### Versión Host 💻
+Para ver el proyecto online, ingrese al siguiente link: [Glucon](LINK)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Librerías utilizadas 📖
+- [React Bootstrap](LINK)
+- [React Icons](LINK)
+- [React Router Dom](LINK)
+- [Firebase](LINK)
+- [SweetAlert2](https://sweetalert2.github.io/#examples)
+- [React-Hook Form](https://react-hook-form.com/get-started#Registerfields)
+
+Desarrollado por Marcela Balladares
+
+

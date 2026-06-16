@@ -8,7 +8,7 @@ import Error from './components/Error';
 import { CartProvider } from './context/CartContext';
 import CartContainer from './components/CartContainer';
 import CartView from './components/CartView';
-import Checkout from './components/Checkout';
+import CheckoutRHF from './components/CheckoutRHF'
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
           <Route path="/category/:type" element={<ItemListContainer saludo={"Categoría"} />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartContainer/>} />
-          <Route path="/checkout" element={<Checkout/>} />
+          <Route path="/checkout" element={<CheckoutRHF/>} />
           <Route path="*" element={<Error />} />
         </Routes>
       </CartProvider>
