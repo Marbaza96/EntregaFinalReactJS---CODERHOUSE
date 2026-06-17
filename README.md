@@ -14,7 +14,7 @@ Este proyecto fue realizado para la entrega de React JS en Coderhouse. Simula un
 > Es necesario contar con Node v24.14.0 instalado
 
 ### Versión Host 💻
-Para ver el proyecto online, ingrese al siguiente link: [Glucon](LINK)
+Para ver el proyecto online, ingrese al siguiente link: [Glucon](https://entrega-final-react-js-coderhouse.vercel.app/)
 
 ### Librerías utilizadas 📖
 - [React Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction/)
