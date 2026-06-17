@@ -5,6 +5,7 @@ import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Swal from "sweetalert2";
+import Carousel from 'react-bootstrap/Carousel';
 
 
 
@@ -31,7 +32,15 @@ const ItemDetail = ({ detail }) => {
       <div className="detail-card">
 
         <div className="detail-img-box">
-          <img className="detail-img" src={detail.img} alt={detail.name} />
+          <Carousel className="detail-carousel" interval={null}>
+            <Carousel.Item>
+              <img className="detail-img" src={detail.img} alt={detail.name} />
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img className="detail-img" src={detail.imgDetail} alt={`${detail.name} detalle`} />
+            </Carousel.Item>
+          </Carousel>
         </div>
 
         <div className="detail-info">
@@ -57,7 +66,13 @@ const ItemDetail = ({ detail }) => {
                 </div>
               )
               : (
-                <ItemCount stock={detail.stock} onAdd={onAdd} />
+                <>
+                  <ItemCount stock={detail.stock} onAdd={onAdd} />
+
+                  <Link className="detail-back-btn" to="/">
+                    Volver al catálogo
+                  </Link>
+                </>
               )
           }
         </div>

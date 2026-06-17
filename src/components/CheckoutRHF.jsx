@@ -61,7 +61,7 @@ const CheckoutRHF = () => {
                                     Complete sus datos para finalizar la compra
                                 </h1>
                                 <p className="checkout-subtitle">
-                                    Complete el formulario para generar tu orden de compra.
+                                    Complete el formulario para generar su orden de compra.
                                 </p>
 
                                 <div className="checkout-total">

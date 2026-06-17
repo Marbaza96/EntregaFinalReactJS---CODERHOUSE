@@ -23,13 +23,14 @@
 .product-card-title {
     color: var(--light-blue);
     font-weight: 800;
-    min-height: 50px;
+    min-height: 80px;
 }
 
 .product-card-description {
     font-size: 0.95rem;
     line-height: 1.4;
-    flex-grow: 1;
+    height: 80px;
+    overflow: hidden;
 }
 
 .product-card-price {

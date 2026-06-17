@@ -30,7 +30,9 @@ function Item({ prod }) {
         <Card.Title className="product-card-title">{prod.name}</Card.Title>
 
         <Card.Text className="product-card-description">
-          {prod.description}
+          {prod.description.length > 90
+            ? `${prod.description.substring(0, 90)}...`
+            : prod.description}
         </Card.Text>
 
         <Card.Text className="product-card-price">
